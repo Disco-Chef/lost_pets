@@ -1,0 +1,8 @@
+<h1><%= @pet.name %> <small>(<%= @pet.species %>)</small></h1>
+<ul>
+  <li>🏡 Address: <%= @pet.address %></li>
+  <li>📅 Found <%= @pet.days_ago %> days ago!</li>
+</ul>
+
+<%= link_to "Go back home!", pets_path %>
+<%= link_to "Found its owner", pet_path(@pet), method: :delete, data: {confirm: "Are you sure? Really, really sure?"} %>
